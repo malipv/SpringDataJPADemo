@@ -1,6 +1,12 @@
 package ru.project;
 
+
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.Id;
+
+//@Entity
 public class Department {
+    //@Id
     long id;
     String name;
 
