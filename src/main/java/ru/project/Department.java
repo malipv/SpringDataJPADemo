@@ -1,19 +1,14 @@
 package ru.project;
 
 
-//import jakarta.persistence.Entity;
-//import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-//@Entity
+@Entity
 public class Department {
-    //@Id
+    @Id
     long id;
     String name;
-
-    public Department(long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
 
     @Override
     public String toString() {

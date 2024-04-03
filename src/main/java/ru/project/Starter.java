@@ -20,8 +20,13 @@ import java.util.List;
 public class Starter {
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Starter.class);
-        DataSource ds = ctx.getBean(DataSource.class);
-        System.out.println(ds);
+        DepartmentRepo ds = ctx.getBean(DepartmentRepo.class);
+        ds.findAll().forEach(System.out::println);
+        //ds.findAllByName("IT").forEach(System.out::println);
+        //ds.findAllByName("Accounting").forEach(System.out::println);    //ds.findAllByName("Account").forEach(System.out::println);
+        ds.findAllByNameStartsWithIgnoreCase("ACC").forEach(System.out::println);
+
+        ds.find1123("IT").forEach(System.out::println);
     }
 }
 
